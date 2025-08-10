@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jounardienyou - Developer & Creator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="assets/image.png">
+    <style>
+        /* Hide scrollbar for webkit browsers */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* Hide scrollbar for Firefox */
+        html {
+            scrollbar-width: none;
+        }
+        
+        /* Ensure scrolling still works */
+        body, html {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Make text unselectable */
+        * {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(147, 51, 234, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.5); }
+        }
+        
+        @keyframes slideInLeft {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes slideInRight {
+            from { opacity: 0; transform: translateX(50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: scale(0.9) translateY(20px); }
+            to { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        
+        @keyframes slideOut {
+            from { opacity: 1; transform: scale(1) translateY(0); }
+            to { opacity: 0; transform: scale(0.9) translateY(20px); }
+        }
+        
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        .animate-glow { animation: glow 3s ease-in-out infinite; }
+        .animate-slide-left { animation: slideInLeft 1s ease-out; }
+        .animate-slide-right { animation: slideInRight 1s ease-out 0.3s both; }
+        .animate-fade-up { animation: fadeInUp 1s ease-out 0.6s both; }
+        .animate-fade-up-delay { animation: fadeInUp 1s ease-out 0.9s both; }
+        .animate-fade-in { animation: fadeIn 0.3s ease-out; }
+        .animate-fade-out { animation: fadeOut 0.3s ease-out; }
+        .animate-slide-in { animation: slideIn 0.3s ease-out; }
+        .animate-slide-out { animation: slideOut 0.3s ease-out; }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6, #6366f1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(147, 51, 234, 0.2);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-blue-900 text-white overflow-x-hidden">
+    <!-- Animated Background Elements -->
+    <div class="fixed inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-20 left-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float"></div>
+        <div class="absolute top-40 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-20 left-1/2 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-float" style="animation-delay: 4s;"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="relative z-10 container mx-auto px-6 py-12">
+        <!-- Header Section -->
+        <header class="text-center mb-16">
+            <div class="animate-slide-left">
+                <h1 class="text-6xl md:text-8xl font-bold gradient-text mb-4">
+                    Jounardienyou
+                </h1>
+                <div class="w-32 h-1 bg-gradient-to-r from-blue-500 to-purple-500 mx-auto rounded-full animate-glow"></div>
+            </div>
+            <p class="text-xl md:text-2xl text-gray-300 mt-6 animate-slide-right">
+                Developer • Creator • Artist
+            </p>
+        </header>
+
+        <!-- About Section -->
+        <section class="max-w-4xl mx-auto mb-16">
+            <div class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20 animate-fade-up card-hover">
+                <h2 class="text-4xl font-bold gradient-text mb-8 text-center">About Me</h2>
+                <div class="space-y-6 text-lg leading-relaxed">
+                    <p class="text-gray-200">
+                        Hey there! I'm <span class="text-blue-400 font-semibold">Jounardienyou</span>, a passionate developer who lives and breathes code. 
+                        My journey in the digital world is driven by an insatiable curiosity and love for creating amazing experiences through technology.
+                    </p>
+                    <p class="text-gray-200">
+                        I specialize in <span class="text-purple-400 font-semibold">web development</span>, crafting beautiful, functional websites that bring ideas to life. 
+                        From sleek user interfaces to robust backend systems, I enjoy every aspect of the development process.
+                    </p>
+                    <p class="text-gray-200">
+                        Beyond coding, I'm also passionate about <span class="text-pink-400 font-semibold">digital art and drawing</span>! 
+                        I love creating anime characters, comics, and game sprites, bringing imagination to life through visual storytelling.
+                    </p>
+                    <p class="text-gray-200">
+                        Currently, I'm embarking on an exciting new adventure - <span class="text-indigo-400 font-semibold">game development</span>! 
+                        Together with my talented friends, we're diving into the world of interactive entertainment, 
+                        ready to create immersive experiences that will captivate players.
+                    </p>
+                    <p class="text-gray-200">
+                        This space is where I'll share my latest projects, development insights, 
+                        games, and everything in between. Stay tuned for some awesome content!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="max-w-6xl mx-auto mb-16 animate-fade-up-delay">
+            <h2 class="text-4xl font-bold gradient-text mb-12 text-center">What I Do</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Web Development -->
+                <div class="bg-gradient-to-br from-blue-500/20 to-blue-600/20 backdrop-blur-lg rounded-2xl p-8 border border-blue-400/30 card-hover">
+                    <div class="text-5xl mb-4 text-blue-400"><i class="fas fa-globe"></i></div>
+                    <h3 class="text-2xl font-bold text-blue-300 mb-4">Web Dev</h3>
+                    <p class="text-gray-300">
+                        Creating stunning, responsive websites with modern technologies. 
+                        From concept to deployment, I build digital experiences that make an impact.
+                    </p>
+                </div>
+
+                <!-- Programming -->
+                <div class="bg-gradient-to-br from-purple-500/20 to-purple-600/20 backdrop-blur-lg rounded-2xl p-8 border border-purple-400/30 card-hover">
+                    <div class="text-5xl mb-4 text-purple-400"><i class="fas fa-code"></i></div>
+                    <h3 class="text-2xl font-bold text-purple-300 mb-4">Programming</h3>
+                    <p class="text-gray-300">
+                        Passionate about clean code and innovative solutions. 
+                        I love tackling complex problems and turning ideas into reality through programming.
+                    </p>
+                </div>
+
+                <!-- Game Development -->
+                <div class="bg-gradient-to-br from-indigo-500/20 to-indigo-600/20 backdrop-blur-lg rounded-2xl p-8 border border-indigo-400/30 card-hover">
+                    <div class="text-5xl mb-4 text-indigo-400"><i class="fas fa-gamepad"></i></div>
+                    <h3 class="text-2xl font-bold text-indigo-300 mb-4">Game Dev</h3>
+                    <p class="text-gray-300">
+                        Embarking on the exciting journey of game creation with my friends. 
+                        Ready to build immersive worlds and unforgettable gaming experiences.
+                    </p>
+                </div>
+
+                <!-- Digital Art -->
+                <div class="bg-gradient-to-br from-pink-500/20 to-rose-600/20 backdrop-blur-lg rounded-2xl p-8 border border-pink-400/30 card-hover">
+                    <div class="text-5xl mb-4 text-pink-400"><i class="fas fa-palette"></i></div>
+                    <h3 class="text-2xl font-bold text-pink-300 mb-4">Digital Art</h3>
+                    <p class="text-gray-300">
+                        Bringing characters to life through anime art, comics, and game sprites. 
+                        Combining creativity with technical skills to create visual masterpieces.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="text-center animate-fade-up-delay">
+            <div class="bg-gradient-to-r from-blue-600/30 to-purple-600/30 backdrop-blur-lg rounded-3xl p-12 border border-white/20">
+                <h2 class="text-4xl font-bold gradient-text mb-6">Let's Create Something Amazing</h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    I'm always excited to collaborate on new projects and share knowledge with fellow developers. 
+                    Stay connected for updates on my latest adventures in code and gaming!
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="showProjects()" class="bg-gradient-to-r from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                        <i class="fas fa-folder-open mr-2"></i>View Projects
+                    </button>
+                    <button onclick="showContact()" class="bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                        <i class="fas fa-envelope mr-2"></i>Contact Me
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Projects Modal -->
+    <div id="projectsModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div id="projectsContent" class="bg-gradient-to-br from-slate-800 to-purple-900 rounded-3xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-purple-400/30">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-4xl font-bold gradient-text">My Projects</h2>
+                <button onclick="hideProjects()" class="text-gray-400 hover:text-white text-3xl transition-colors">×</button>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- 4 Digits Chat -->
+                <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 card-hover">
+                    <div class="text-5xl mb-4 text-center text-blue-400"><i class="fas fa-comments"></i></div>
+                    <h3 class="text-2xl font-bold text-blue-300 mb-3">4 Digits Chat</h3>
+                    <p class="text-gray-300">
+                        A simple easy to use chat website that's fast and secure with very nice UI. 
+                        Connect with others through clean, intuitive messaging.
+                    </p>
+                </div>
+
+                <!-- Joe Pong -->
+                <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 card-hover">
+                    <div class="text-5xl mb-4 text-center text-purple-400"><i class="fas fa-table-tennis-paddle-ball"></i></div>
+                    <h3 class="text-2xl font-bold text-purple-300 mb-3">Joe Pong</h3>
+                    <p class="text-gray-300">
+                        Multi modes and options multiplayer ping pong game. 
+                        Challenge friends with various game modes and customizable settings.
+                    </p>
+                </div>
+
+                <!-- Chill Area -->
+                <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 card-hover md:col-span-2">
+                    <div class="text-5xl mb-4 text-center text-indigo-400"><i class="fas fa-users"></i></div>
+                    <h3 class="text-2xl font-bold text-indigo-300 mb-3">Chill Area</h3>
+                    <p class="text-gray-300">
+                        A very nice multi-use website where gamers and devs can chat, play mini games, 
+                        post work and more. The ultimate community hub for creators and players.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden items-center justify-center p-4">
+        <div id="contactContent" class="bg-gradient-to-br from-slate-800 to-blue-900 rounded-3xl p-8 max-w-2xl w-full border border-blue-400/30">
+            <div class="flex justify-between items-center mb-8">
+                <h2 class="text-4xl font-bold gradient-text">Contact Me</h2>
+                <button onclick="hideContact()" class="text-gray-400 hover:text-white text-3xl transition-colors">×</button>
+            </div>
+            
+            <div class="space-y-6">
+                <p class="text-gray-300 text-lg text-center mb-8">
+                    Let's connect! Feel free to reach out through any of these channels:
+                </p>
+                
+                <!-- Email -->
+                <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 card-hover">
+                    <div class="flex items-center space-x-4">
+                        <div class="text-3xl text-red-400">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-red-300 mb-2">Email</h3>
+                            <a href="mailto:Jounardienyou@gmail.com" class="text-gray-300 hover:text-red-300 transition-colors">
+                                Jounardienyou@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Discord -->
+                <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 card-hover">
+                    <div class="flex items-center space-x-4">
+                        <div class="text-3xl text-indigo-400">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-indigo-300 mb-2">Discord</h3>
+                            <p class="text-gray-300">Jounardienyou</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="relative z-10 text-center py-8 mt-16">
+        <div class="w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent mb-6"></div>
+        
+        <!-- Social Links -->
+        <div class="flex justify-center space-x-6 mb-6">
+            <a href="mailto:Jounardienyou@gmail.com" class="text-gray-400 hover:text-red-400 transition-colors duration-300 text-2xl">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://discord.com/users/Jounardienyou" target="_blank" class="text-gray-400 hover:text-indigo-400 transition-colors duration-300 text-2xl">
+                <i class="fab fa-discord"></i>
+            </a>
+            <a href="https://github.com/JNRDNU" target="_blank" class="text-gray-400 hover:text-gray-200 transition-colors duration-300 text-2xl">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        
+        <p class="text-gray-400">
+            © 2024 Jounardienyou • Crafted with 💜 and lots of ☕
+        </p>
+    </footer>
+
+    <script>
+        function showProjects() {
+            const modal = document.getElementById('projectsModal');
+            const content = document.getElementById('projectsContent');
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex', 'animate-fade-in');
+            content.classList.add('animate-slide-in');
+        }
+
+        function hideProjects() {
+            const modal = document.getElementById('projectsModal');
+            const content = document.getElementById('projectsContent');
+            
+            modal.classList.add('animate-fade-out');
+            content.classList.add('animate-slide-out');
+            
+            // Hide modal after animation completes
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex', 'animate-fade-in', 'animate-fade-out');
+                content.classList.remove('animate-slide-in', 'animate-slide-out');
+            }, 300);
+        }
+
+        function showContact() {
+            const modal = document.getElementById('contactModal');
+            const content = document.getElementById('contactContent');
+            
+            modal.classList.remove('hidden');
+            modal.classList.add('flex', 'animate-fade-in');
+            content.classList.add('animate-slide-in');
+        }
+
+        function hideContact() {
+            const modal = document.getElementById('contactModal');
+            const content = document.getElementById('contactContent');
+            
+            modal.classList.add('animate-fade-out');
+            content.classList.add('animate-slide-out');
+            
+            // Hide modal after animation completes
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex', 'animate-fade-in', 'animate-fade-out');
+                content.classList.remove('animate-slide-in', 'animate-slide-out');
+            }, 300);
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('projectsModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                hideProjects();
+            }
+        });
+
+        // Close contact modal when clicking outside
+        document.getElementById('contactModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                hideContact();
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96d015c334b258c7',t:'MTc1NDgzNTExMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
